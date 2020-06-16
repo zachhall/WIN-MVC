@@ -68,3 +68,21 @@ Difference in package depends on what purpose your program is fulfilling
 
 **JAR** = contains libraries, resources and accessories for an application
 **WAR** = contains the web application that can be deployed to a server. Contains JSP, HTML, JS, etc. for the development of web applications.
+
+### Adding a Manifest for your JAR file
+
+We have to give the built-in maven-jar plugin in our `pom.xml` some configuration information so that it knows where your program's main() is for it to exectute.
+
+Inside of the `<plugins>` section, find the `mavin-jar-plugin` and add the following under its artifactID and version:
+
+```
+...
+<configuration>
+    <archive>
+        <manifest>
+        // replace myPackage with the name of your own package
+        <mainClass>com.myPackage.App</mainClass>
+        </manifest>
+    </archive>
+</configuration>
+```
