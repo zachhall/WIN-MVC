@@ -50,3 +50,21 @@ POM.xml
 
 - Project-Object-Model
 - this is the file that defines our project and all of its dependencies
+
+### Maven UIDs (Unique Identifiers)
+
+groupID = Group or organization that the project belongs, offen expressed as a inverted domain name, ex: com.win
+
+artifactID = name for the project, will be the name given to its library artifact (.JAR or .WAR file)
+
+version = version of the project being built (0.0.1)
+
+package = either JAR or WAR
+
+### JAR and WAR
+
+Simply zipped/compressed files after your program has been compiled.
+Difference in package depends on what purpose your program is fulfilling
+
+**JAR** = contains libraries, resources and accessories for an application
+**WAR** = contains the web application that can be deployed to a server. Contains JSP, HTML, JS, etc. for the development of web applications.
